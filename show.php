@@ -42,7 +42,7 @@
          echo '<td>'.$count.'</td>';
          echo '<td>' .$row["name"]. '</td>';
          echo '<td>' .$row["email"]. '</td>';
-         echo '<td><a href="edit.php?id=' . $row["id"]."?name=".$row["name"].'">Edit</a></td>';
+          echo '<td><a href="edit.php?id='. $row["id"]."&name=". $row["name"]."&email=". $row["email"].'">Edit</a></td>';
          echo '<td><a href="Delete.php?id=' . $row["id"].'">Delete</a></td>';
          echo '</tr>';
          $count++;

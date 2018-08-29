@@ -6,7 +6,7 @@ $email = $_POST["email"];
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo "Connection failed: " . $conn->connect_error;
 } 
 
 $sql ="UPDATE contact SET name = '$name', email ='$email' WHERE id = $id";
