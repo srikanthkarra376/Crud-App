@@ -2,7 +2,9 @@
 include 'inc/db.php';
 $id = $_GET['id'];
 $name = $_POST["name"];
-$email = $_POST["email"];
+$email = $_POST["email"]; 
+
+
 
 // Check connection
 if ($conn->connect_error) {

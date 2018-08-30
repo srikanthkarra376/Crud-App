@@ -1,19 +1,10 @@
 
-<?php 
-include 'inc/header.php';
-include 'inc/footer.php';
-?>
+<?php include 'inc/header.php';?>
 
 <div class="container">
-  <ul>
-  
-  <li><a href="newUser.php">Add a User</a></li>
-  <li><a href="show.php">seeAll Users</a></li>
-
-  
-  </ul>
-
+<h1>CRUD Application</h1>
 </div>
+<?php include 'inc/footer.php';?>
 
 
 

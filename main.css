@@ -1,0 +1,7 @@
+#addUser,#editUser {
+  padding:25px;
+  margin: auto 30%;
+}
+#addUser form ,#editUser form{
+  margin:15px 0;
+}

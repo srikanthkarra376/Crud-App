@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CRUD_APP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
-<body>
+<?php include 'inc/header.php'?>;
 <div class="container">
-<h1>See All Users Application</h1>
-  <table class="table">
-    <tr>
-      <th scope="col">S.NO</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+<h3 class="mb-5">checkout all users :</h3>
+  <table class="table table-striped bordered">
+    <tr  class=" text-center thead-dark">
+      <th class=" text-center" scope="col">S.NO</th>
+      <th class=" text-center" scope="col">Name</th>
+      <th  class=" text-center" scope="col">Email</th>
+      <th  class=" text-center" scope="col">Edit</th>
+      <th  class=" text-center" scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <?php  include_once 'inc/db.php';
+    
         //check the connection
      if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
@@ -38,12 +29,12 @@
     if ($result->num_rows > 0) {
 
          while($row = $result->fetch_assoc()) {
-         echo '<tr>';
-         echo '<td>'.$count.'</td>';
+         echo '<tr class=" text-center" >';
+         echo '<td class="text-center">'.$count.'</td>';
          echo '<td>' .$row["name"]. '</td>';
          echo '<td>' .$row["email"]. '</td>';
-          echo '<td><a href="edit.php?id='. $row["id"]."&name=". $row["name"]."&email=". $row["email"].'">Edit</a></td>';
-         echo '<td><a href="Delete.php?id=' . $row["id"].'">Delete</a></td>';
+         echo '<td ><a class="btn btn-warning" href="edit.php?id='. $row["id"]."&name=". $row["name"]."&email=". $row["email"].'">Edit</a></td>';
+         echo '<td ><a class="btn btn-danger" href="Delete.php?id=' . $row["id"].'">Delete</a></td>';
          echo '</tr>';
          $count++;
       }

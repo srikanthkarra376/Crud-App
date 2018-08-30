@@ -1,10 +1,8 @@
 <?php
 include 'inc/db.php';
-session_start();
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-
 
 //checck for the connection
 if (!$conn) {
